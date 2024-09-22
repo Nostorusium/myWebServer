@@ -35,7 +35,7 @@ Speed=70824 pages/min, 3882335 bytes/sec.
 Requests: 5902 susceed, 0 failed.
 ```
 
-在8线程下，webbench测试10000并发数据速率在68000~70000 pages/min左右。
+由于实现比较简陋，性能直接差了一个数量级。
 
 ## 注意事项
 
