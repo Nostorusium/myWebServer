@@ -21,6 +21,22 @@ Reactor+线程池以及自定义的Buffer
 
 在提供了这一支持后，页面所播放的视频已经可以随意自由地拖动进度条，且每次拖动都不需要等待一整个文件重新发送了。  
 
+## 性能参数
+
+```
+webbench -c 10500 -t 5 http://127.0.0.1:12345/index.html
+Webbench - Simple Web Benchmark 1.5
+Copyright (c) Radim Kolar 1997-2004, GPL Open Source Software.
+
+Benchmarking: GET http://127.0.0.1:12345/index.html
+10500 clients, running 5 sec.
+
+Speed=70824 pages/min, 3882335 bytes/sec.
+Requests: 5902 susceed, 0 failed.
+```
+
+在8线程下，webbench测试10000并发数据速率在68000~70000 pages/min左右。
+
 ## 注意事项
 
 编译没什么好说的全塞一起就行，资源目录应设置为执行文件同目录下的/resourses  
